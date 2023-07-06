@@ -17,6 +17,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'rakr/vim-one'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 " general settings
@@ -54,6 +55,15 @@ let NERDTreeMinimalUI=1
 let g:NERDTreeDirArrowExpandable = ''
 let g:NERDTreeDirArrowCollapsible = ''
 let g:NERDTreeLimitedSyntax = 1
+let g:NERDTreeExtensionHighlightColor = {}
+let g:NERDTreeExtensionHighlightColor['css'] = "2965f1"
+let g:NERDTreeExtensionHighlightColor['html'] = "f06529"
+let g:NERDTreeExtensionHighlightColor['js'] = "f0db4f"
+let g:NERDTreeExtensionHighlightColor['py'] = "ffde57"
+let g:NERDTreeExactMatchHighlightColor = {}
+let g:NERDTreeExactMatchHighlightColor['.gitignore'] = "F1502F"
+let NERDTreeShowHidden=1
+let NERDTreeIgnore=['\.git$', '.swp', '^__pycache__$']
 
 " air-line config
 let g:airline_powerline_fonts = 1
@@ -73,7 +83,7 @@ let g:airline_symbols.paste = '∥'
 let g:airline_symbols.whitespace = 'Ξ'
 let g:airline_left_sep = ''
 let g:airline_left_alt_sep = ''
-let g:airline_symbols.branch = ''
+let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 let g:airline_solarized_bg='dark'
